@@ -1,0 +1,27 @@
+type Query{
+allCompanies:[Company]
+allUsers:[User]
+getUser(userId:Int):User
+getCompany(companyId:Int):Company
+}
+
+
+type Company{
+accountManager:String
+accountManagerId:Int
+canCreateBscEliteDocuments:Boolean
+companyId:Int
+companyName:String
+companySize:String
+	
+	
+}
+
+type User{
+userId:Int
+firstName:String
+companyId:Int
+company:Company
+
+
+}
