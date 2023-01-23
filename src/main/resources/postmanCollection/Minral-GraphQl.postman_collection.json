@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "58373ae8-5726-4bcb-a508-e610c2b1c1d2",
+		"name": "Minral-GraphQl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14117976"
+	},
+	"item": [
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    getUser(userId:7760){\r\n        userId\r\n        firstName\r\n        companyId\r\n        company{\r\n            companyName\r\n            companyId\r\n        }\r\n        \r\n    }\r\n            \r\n\r\n}",
+						"variables": ""
+					}
+				},
+				"url": "{{GraphQLURL}}/graphql"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCompanies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    allCompanies{\r\n        companyName\r\n        companyId\r\n    }\r\n            \r\n    \r\n    \r\n}",
+						"variables": ""
+					}
+				},
+				"url": "{{GraphQLURL}}/graphql"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    allUsers{\r\n        userId\r\n        firstName\r\n        companyId\r\n        company{\r\n            accountManager\r\n            accountManagerId\r\n            companyId\r\n        }\r\n        \r\n    }\r\n            \r\n\r\n}",
+						"variables": ""
+					}
+				},
+				"url": "{{GraphQLURL}}/graphql"
+			},
+			"response": []
+		},
+		{
+			"name": "getCompanyById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    getCompany(companyId:132847){\r\n       companyId\r\n       companyName\r\n       companySize\r\n\r\n        \r\n        \r\n    }\r\n            \r\n\r\n}",
+						"variables": ""
+					}
+				},
+				"url": "{{GraphQLURL}}/graphql"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "GraphQLURL",
+			"value": "http://localhost:8009"
+		}
+	]
+}
