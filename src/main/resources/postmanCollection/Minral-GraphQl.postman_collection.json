@@ -62,11 +62,27 @@
 				"body": {
 					"mode": "graphql",
 					"graphql": {
-						"query": "query{\r\n    getCompany(companyId:132847){\r\n       companyId\r\n       companyName\r\n       companySize\r\n\r\n        \r\n        \r\n    }\r\n            \r\n\r\n}",
+						"query": "query{\r\n    getCompany(companyId:6971){\r\n       companyId\r\n       companyName\r\n       industry\r\n       \r\n\r\n\r\n        \r\n        \r\n    }\r\n            \r\n\r\n}",
 						"variables": ""
 					}
 				},
 				"url": "{{GraphQLURL}}/graphql"
+			},
+			"response": []
+		},
+		{
+			"name": "requestForDiffrentEntities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    getUser(userId:7760){\r\n        userId\r\n        firstName\r\n        companyId\r\n        company{\r\n            companyId\r\n            companyName\r\n        }\r\n    }\r\n\r\n    getCompany(companyId:6959){\r\n            companyId\r\n            companyName\r\n            industry\r\n    }\r\n            \r\n\r\n}\r\n\r\n\r\n",
+						"variables": ""
+					}
+				},
+				"url": "http://localhost:8009/graphql"
 			},
 			"response": []
 		}
